@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Classification</title>
+</head>
+<body>
+    <h2>Enter text for prediction:</h2>
+    <form action="/predict_web" method="POST">
+        <textarea name="text" rows="5" cols="50"></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h3>Prediction: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
